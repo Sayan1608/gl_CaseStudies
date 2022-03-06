@@ -12,9 +12,10 @@ public class IndianBankInterface {
 //	static Customer customer1 = new Customer("HDFC1011", "Subho@123", 1000);
 //	static Customer customer2 = new Customer("ICIC12101", "Bankim@142", 3000);
 
-	static ArrayList<Customer> customerList = CustomerList.list;
+	static ArrayList<Customer> customerList = CustomerList.getCustomerList();
 
 	public static void main(String[] args) {
+
 		Scanner in = new Scanner(System.in);
 		System.out.println("Enter your Account no");
 		String accNo = in.nextLine();
@@ -33,7 +34,7 @@ public class IndianBankInterface {
 				option = in.nextInt();
 				double Amount;
 				in.nextLine();
-				
+
 				switch (option) {
 				case 1:
 					System.out.println("Enter the amount to Deposit : ");
@@ -63,7 +64,7 @@ public class IndianBankInterface {
 						} else {
 							System.out.println("Insufficient Account balance");
 						}
-					}else {
+					} else {
 						System.out.println("Recipient Account does not exist.");
 					}
 					break;
@@ -71,7 +72,7 @@ public class IndianBankInterface {
 				case 0:
 					break;
 				}
-				
+
 				in.nextLine();
 				System.out.println("Do you want to have any other Transactions?");
 				choice = in.nextLine();
